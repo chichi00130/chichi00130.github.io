@@ -1,0 +1,129 @@
+$bg_color: #943B3B;
+$bg_color2: #FAF0E4;
+$color_w: rgb(255, 255, 255);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans CJK TC", "Microsoft JhengHei", Arial, Helvetica, PingFang, STHeiti, sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 10px;
+}
+
+.shop-img-wrap {
+    width: 100vw;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.824), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/images/banner_06.jpg');
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-position:0 50%;
+}
+
+.col-lg-3 {
+    .categories_title {
+        font-size: 2.4rem;
+        font-weight: 900;
+        color: $bg_color;
+    }
+
+    .templatemo-accordion {
+        .pb-3 {
+            .categories_text {
+                font-size: 2rem;
+                color: #000;
+                display: flex;
+                justify-content: space-between;
+                text-decoration: none;
+                font-weight: bold;
+                // margin: 5px;
+                // padding: 5px;
+            }
+
+            .categories_text:hover {
+                color: $bg_color;
+            }
+
+            .categories_text2 {
+                font-size: 1.8rem;
+                font-weight: 400 !important;
+                color: #000;
+                text-decoration: none;
+                font-weight: bold;
+                // margin: 5px;
+                padding: 0 5px;
+
+            }
+
+            .categories_text2:hover {
+                color: $bg_color;
+            }
+
+        }
+    }
+
+
+}
+
+.card-body2 {
+    margin: auto;
+    padding: 1rem 1rem
+}
+
+.card {
+    .card-body2 {
+        flex: 1 1 auto;
+        padding: 1rem 1rem;
+
+        h2 {
+            font-size: 3.8rem;
+            color: $bg_color;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        .coin {
+            font-size: 2.4rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            font-weight: 400;
+        }
+
+        .list-inline {
+            padding: 2rem 0 0 0;
+
+            .list-inline-item {
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .card_text {
+            font-size: 1.8rem;
+            font-weight: 200;
+        }
+
+        form {
+            font-size: 2rem;
+
+            .btn-success {
+                background-color: #59ab6e;
+                border-color: #56ae6c;
+                padding: 0.5rem 1rem;
+            }
+
+            .btn-size {
+                font-size: 1.8rem;
+            }
+        }
+
+    }
+}

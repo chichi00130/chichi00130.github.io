@@ -1,0 +1,746 @@
+$bg_color: #943B3B;
+$bg_color2: #FAF0E4;
+$color_w: rgb(255, 255, 255);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans CJK TC", "Microsoft JhengHei", Arial, Helvetica, PingFang, STHeiti, sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 10px;
+}
+
+// body {
+//     scroll-behavior: smooth;
+// }
+
+@mixin h2 ($color) {
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: $color;
+}
+
+@mixin h3 ($color, $align) {
+    font-size: 2.4rem;
+    color: $color;
+    text-align: $align;
+}
+
+@mixin h4 ($color) {
+    font-size: 2.0rem;
+}
+
+@mixin p ($color) {
+    font-size: 1.8rem;
+}
+
+@mixin new_bnt {
+    border-radius: 10px;
+    background-color: #C58484;
+    font-size: 1.8rem;
+    border: none;
+    display: block;
+    position: absolute;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+// 內文
+main {
+    width: 100%;
+    position: relative;
+    top: 0;
+    bottom: 150px;
+
+    .bg_img2 {
+        width: 100%;
+        height: 88px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .botton_0 {
+        bottom: 0;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+
+        .swiper-slide {
+            width: 100%;
+            height: 80vh;
+            text-align: center;
+            font-size: 1.8rem;
+            // background: #27115f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .swiper-slide {
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+        }
+
+        .swiper-pagination {
+            bottom: 40px;
+        }
+    }
+
+    .about {
+        width: 100%;
+        // height: 100vh;
+        // background-color: #6d3b94;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 88px 0;
+
+        .box_bg {
+            width: 100%;
+            height: 250px;
+            background-color: #ffdaac;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .about_content {
+            border-radius: 100px 300px 50px 100px;
+            // background-color: #58330e;
+
+            width: 70%;
+            height: 520px;
+            background: linear-gradient(-180deg, #FFFBF7, #FFFBF7, #FFFBF7, #FFFBF7, #FFFBF7, #f6c9a0);
+            position: relative;
+            box-shadow: -5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+
+            .text {
+                position: absolute;
+                top: 20%;
+                left: 10%;
+                width: 65%;
+
+                h2 {
+                    width: 100%;
+                    @include h2 (#943B3B);
+
+                }
+
+                p {
+                    width: 100%;
+                    margin-top: 30px;
+                    font-size: 1.8rem;
+                    letter-spacing: 0.1em;
+                    line-height: 180%;
+                    font-weight: 200;
+                    color: #000000;
+                    text-align: left;
+                    display: inline-block;
+                    // width: 638px;
+                    // height: 215px;
+                }
+            }
+
+        }
+
+        .about_pet {
+            width: 40%;
+            position: absolute;
+            right: 8%;
+            bottom: -50px;
+        }
+
+        @media (max-width:1400px) {
+            .about_content {
+
+                .text {
+
+                    top: 10%;
+                }
+            }
+
+
+        }
+
+        @media (max-width:995px) {
+            .about_content {
+                width: 70%;
+                height: 600px;
+                border-radius: 100px 100px 100px 100px;
+
+                .text {
+                    width: 80%;
+                }
+            }
+
+            .about_pet {
+                width: 45%;
+                right: 0%;
+                bottom: -50px;
+
+            }
+        }
+
+        @media (max-width:768px) {
+            .container {
+                max-width: 80%;
+
+                .about_content {
+                    width: 100%;
+                    // height: 600px;
+                    // border-radius: 100px 100px 100px 100px;
+
+                }
+
+                .about_pet {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width:550px) {
+
+            .about_content {
+                height: 800px;
+                align-items: end
+                
+
+            }
+
+
+        }
+    }
+
+    .grid {
+        width: 100%;
+        display: flex;
+        background-color: $bg_color2;
+
+        .grid_a {
+            width: (100%/3);
+            // background-color: #C58484;
+
+            .grid_img1 {
+                width: 100%;
+                height: 330px;
+                // border-radius: 10px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url('../images/grid_img_01.jpg');
+            }
+
+            .grid_img2 {
+                width: 100%;
+                height: 330px;
+                // border-radius: 10px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url('../images/grid_img_02.jpg');
+            }
+
+            .grid_img3 {
+                width: 100%;
+                height: 330px;
+                // border-radius: 10px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url('../images/grid_img_03.jpg');
+            }
+
+            .grid_text {
+                width: 90%;
+                height: 100px;
+                border-radius: 50px;
+                margin: auto;
+                background-color: $bg_color2;
+                padding-top: 10px;
+                position: relative;
+                top: -35px;
+
+                .grid_icon {
+                    width: 50px;
+                    height: 50px;
+                    color: #fff;
+                    background-color: $bg_color;
+                    text-align: center;
+                    line-height: 50px;
+                    border-radius: 50px;
+                    margin: auto;
+                }
+
+                h3 {
+                    // width: 80%;
+                    margin: auto;
+                    padding: 10px 0;
+                    // background-color: aquamarine;
+                    @include h3 (#943B3B, center);
+                }
+            }
+
+
+        }
+    }
+
+    .aaa {
+        width: 100%;
+        background-color: $bg_color2;
+        padding: 50px 0;
+
+        .title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            margin-bottom: 30px;
+
+            // position: relative;
+            .line-title {
+                flex: 1;
+                border-top: 2px solid $bg_color;
+                box-sizing: border-box;
+                // width: 100%;
+                height: 2px;
+                // margin: auto;
+            }
+
+            h2 {
+                @include h2 (#943B3B);
+                margin: 0 10px;
+            }
+
+            .title_img {
+                bottom: 0;
+            }
+        }
+
+        .new {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            .newbar {
+                width: 30%;
+                display: block;
+                margin: auto;
+                padding: 80px 0;
+
+                .new_img {
+
+                    // width: 30%;
+                    img {
+                        width: 100%;
+                        border-radius: 50px;
+                    }
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    letter-spacing: 0.12em;
+                    color: #000000;
+                    text-align: left;
+                    display: inline-block;
+                    // width: 30%;
+                    padding: 0 40px;
+                }
+
+                h3 {
+                    // width: 30%;
+                    padding: 0 40px;
+                    @include h3 (#943B3B, left);
+                }
+            }
+
+            .shop {
+                width: 22%;
+                display: block;
+                margin: auto;
+                padding: 80px 0;
+
+                .shop_img {
+                    width: 100%;
+                    padding-top: 100%;
+                    border-radius: 50%;
+                    background-color: #AFAFAF;
+                    margin: 20px auto;
+
+                    // background-image: url('../img/grid_img_02.jpg');
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                h3 {
+                    // width: 30%;
+                    padding: 0 40px;
+                    @include h3 (#943B3B, center);
+                }
+            }
+        }
+
+        .new_bnt {
+            @include new_bnt;
+            right: 10%;
+        }
+
+        .container {
+            justify-content: center;
+
+            .givehmoe_text {
+                // width: 50%;
+                padding: 20px 30px;
+                position: relative;
+
+                h3 {
+                    // padding: 0 40px;
+                    @include h3 (#943B3B, left);
+                }
+
+                p {
+                    font-size: 1.8rem;
+                    line-height: 180%;
+                    font-weight: 200;
+                    // color: var(--color-black);
+                    // width: 100%;
+                }
+            }
+
+            .new_bnt2 {
+                // margin-top: 100px;
+                @include new_bnt;
+                position: absolute;
+                right: 30px;
+                // left: 15%;
+            }
+
+            .givehmoe_img {
+                // width: 90%;
+                padding: 20px 20px;
+                border-radius: 50%;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+
+            .shop_img_1 {
+                width: 20vw;
+                height: 20vw;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .justify-items-center {
+                justify-items: center;
+            }
+
+            .s_number {
+                width: 5rem;
+                height: 5rem;
+                background-color: #943B3B;
+                text-align: center;
+                line-height: 5rem;
+                color: #fff;
+                font-size: 2rem;
+                font-family: 'Leckerli One', Courier, monospace;
+            }
+
+            .card-body2 {
+                h3 {
+                    font-weight: 600;
+                    padding: 2rem 0 0 0;
+                    @include h3 (#943B3B, center);
+                }
+            }
+        }
+
+    }
+
+    .footer_bg {
+        width: 100%;
+        z-index: 3;
+        // position: absolute;
+        // top: 30px;
+        background-color: $bg_color2;
+    }
+
+    footer {
+        width: 100%;
+
+        // margin: auto;
+        // height: 300px;
+        // position: relative;
+        .footerbar {
+            width: 100%;
+            background-color: $bg_color;
+            text-align: center;
+
+            .footer_logo {
+                img {
+                    margin-top: 50px;
+                    width: 10%;
+                }
+
+            }
+
+            .footerbar_navbar {
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 1.8rem;
+                    font-weight: 200;
+                    margin: 0 10px;
+                    letter-spacing: 0.1em;
+
+                }
+
+            }
+
+            .connection {
+                color: #fff;
+                font-size: 1.4rem;
+                font-weight: 200;
+                letter-spacing: 0.1rem;
+                //text-underline-offset: 5px; //文字之間的距離                
+            }
+
+            .copyright {
+                font-size: 1.4rem;
+                font-weight: 400;
+                margin: 10px 0 30px 0;
+                letter-spacing: 1px;
+                color: #AFAFAF;
+            }
+
+            .line-div {
+                border-top: 1px solid $color_w;
+                box-sizing: border-box;
+                width: 80%;
+                height: 1px;
+                margin: auto;
+            }
+
+            #gototop {
+                margin: 30px;
+                padding-bottom: 10px;
+                font-size: 1.8rem;
+                text-align: center;
+                color: #fff;
+                text-decoration: none;
+                transition: 0.5s;
+            }
+        }
+
+    }
+}
+
+// 登入畫面
+.login_modal {
+    display: none;
+    /* 預設隱藏 */
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    /* 固定留在原地 */
+    z-index: 4;
+    // left: 0;
+    // top: 0;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    //overflow: auto;  /* 如果需要則啟用滾動 */    
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* Black w/ opacity */
+    // padding-top: 60px;
+    .imgcontainer {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 15%;
+            position: absolute;
+            right: -45px;
+            top: -45px;
+            z-index: 5;
+        }
+
+        img:hover,
+        img:focus {
+            cursor: pointer; //滑鼠圖示變化
+        }
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .login_modal-content {
+        background-color: #ffffffc1;
+        margin: auto;
+        border: 1px solid #888;
+        width: 50%;
+        border-radius: 15px;
+        z-index: 5;
+
+        /* 包裹住內容的框框 */
+        .login_bar_up {
+            box-sizing: content-box;
+            border-radius: 15px;
+            background-color: rgba(197, 132, 132, 0.35);
+            // height: 60%;
+            // max-width: 50%;
+            padding: 20px 0;
+            // margin-top: 135px;
+            position: relative;
+            margin: auto;
+
+            // bottom: 55%;
+            // left: 28%;    
+            h2 {
+                @include h2 (black);
+                font-family: 'Leckerli One', cursive;
+                // position: absolute;
+                padding: 10px 0 20px 30px;
+            }
+
+            .login_box {
+                width: 90%;
+                margin: auto;
+
+                .option {
+                    display: flex;
+                    padding: 20px 0;
+                    justify-content: center;
+
+                    .login_text {
+                        padding-right: 20px;
+                        font-weight: 800;
+                        font-size: 2rem;
+                        line-height: 39px;
+                    }
+
+                    input[type=text],
+                    input[type=password] {
+                        width: 65%;
+                        padding: 10px;
+                        border-radius: 5px;
+                        // margin: 8px 0;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;
+                        font-size: 1.8rem;
+                    }
+
+
+                }
+
+                .option2 {
+                    display: flex;
+                    padding: 50px 0 0 0;
+                    position: relative;
+
+                    // justify-content: center;
+                    a {
+                        text-decoration: none;
+                    }
+
+                    .login_text2 {
+                        font-size: 1.5rem;
+                        color: #1564AD;
+                        letter-spacing: 0.2em;
+                    }
+
+                    .login_text2:hover {
+                        // background-color: rgb(255, 46, 46);
+                        color: #ff2453;
+                        // border-radius: 50px;
+                        // border: 2px solid palevioletred; 
+                    }
+
+                    button {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        padding: 5px 15px;
+                        border: none;
+                        color: #fff;
+                        background-color: #C58484;
+                        border-radius: 10px;
+                        cursor: pointer; // 滑鼠圖示
+                    }
+                }
+
+            }
+        }
+    }
+
+    .animate {
+        /* 新增縮放動畫 */
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s;
+    }
+
+    @-webkit-keyframes animatezoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes animatezoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+
+}
+
+// .lodo-1-icon {
+
+//     background-color: black;            
+//     height: 100%;
+//     width: 100%;            
+//     max-width: 100%;
+//     overflow: hidden;
+//     max-height: 100%;
+//     object-fit: cover;
+// }

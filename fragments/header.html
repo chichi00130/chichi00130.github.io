@@ -1,0 +1,138 @@
+
+    <!-- th:fragment="header" -->
+    <header th:fragment="header">
+        <div class="login_modal" style="display: none;">
+            <!-- 會員登入 -->
+
+            <form id="login_modal_2" class="animate login_modal-content " method="post" action="/pscheck">
+                <div class="imgcontainer">
+                    <img src="/images/close_icon2.png" alt="貓爪圖案" class="paw">
+                </div>
+                <section class="login_bar_up">
+                    <h2 class="loginarticle">Login</h2>
+                    <div class="login_box">
+                        <div class="option">
+                            <label for="username">
+                                <p class="login_text">使用者帳號</p>
+                            </label>
+                            <input type="text" placeholder="請輸入帳號" name="username" required>
+                        </div>
+                        <div class="option">
+                            <label for="password">
+                                <p class="login_text">使用者密碼</p>
+                            </label>
+                            <input type="password" placeholder="請輸入密碼" name="password" required>
+                        </div>
+                        <p style="font-size: 3rem;text-align: center;display: none" id="showpassword">密碼為:<span
+                                style="font-size: 3rem;text-align: center" th:text="${password}"></span></p>
+                        <div id="forget_password2" class="option2">
+                            <a href="#" style="margin-right: 10px;" id="forget_password2_2">
+                                <p class="login_text2">忘記密碼?</p>
+                            </a>
+                            <p class="login_text2">|</p>
+                            <a href="/reg" style="margin-left: 10px;">
+                                <p class="login_text2">會員註冊</p>
+                            </a>
+                            <button id="log-in" type="submit">登入</button>
+                        </div>
+                    </div>
+                </section>
+            </form>
+
+
+            <!-- 忘記密碼 -->
+
+            <form id="forget_password3" class="d-none1 animate login_modal-content " method="post"
+                action="/forgetpassword">
+                <div class="imgcontainer">
+                    <img src="/images/close_icon2.png" alt="貓爪圖案" class="paw">
+                </div>
+                <section class="login_bar_up">
+                    <h2 class="loginarticle">Login</h2>
+                    <div class="login_box">
+                        <div class="option">
+                            <label for="username">
+                                <p class="login_text">帳號</p>
+                            </label>
+                            <input type="text" id="username" name="username" required="required"
+                                placeholder="username..." style="width: 30rem; font-size: 1.5rem; padding-left: 1rem;">
+                        </div>
+                        <div class="option">
+                            <label for="email">
+                                <p class="login_text">信箱</p>
+                            </label>
+                            <input type="email" id="email" name="email"
+                                style="width: 30rem; font-size: 1.5rem; padding-left: 1rem;"
+                                placeholder="ex:abc@gmail.com">
+                        </div>
+                        <div id="login_up2" class="option2">
+                            <a href="#" style="margin-right: 10px;" id="login_up3">
+                                <p class="login_text2">返回登入畫面</p>
+                            </a>
+                            <button id="verify" type="submit">驗證</button>
+                        </div>
+                    </div>
+                </section>
+            </form>
+
+
+        </div>
+        
+        <!-- Start Header/Navigation -->
+        <nav class="navbar navbar-expand-xl navbar-dark " arial-label="Furni navigation bar">
+            <div class="container align-items-end">
+                <div class="h_logo m-md-auto">
+                    <a href="index.html"><img src="/images/logo_01.png" alt="header_logo" title="logo" aria-label="logo"></a>
+                </div>
+                <!-- <a class="navbar-brand" href="index.html">Furni<span>.</span></a> -->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+                    aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsFurni">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0 ">
+                        <li><a class="nav-link active " href="index.html"><i class="fa fa-fw fa-home"></i> 首頁</a></li>
+                        <li><a class="nav-link" href="about.html"><i class="fa fa-fw fa-user"></i> 關於我們</a></li>
+                        <li><a class="nav-link" href="petlist.html"><i class="fa fa-fw fa-paw"></i> 給牠個家</a></li>
+                        <li><a class="nav-link" href="news.html"><i class="fa fa-fw fa-newspaper"></i> 最新消息</a></li>
+                        <li><a class="nav-link" href="shopping.html"><i class="fa fa-fw fa-shop"></i> 周邊商品</a></li>
+                        <li><a class="nav-link" href="problem.html"><i class="fa fa-fw fa-clipboard-question"></i> 常見問題</a>
+                        </li>
+                        <li>
+                            <ul class="navbar-nav mb-2 mb-md-0 ms-auto text-md-center">
+                                <li>
+                                    <a class="nav-link" href="shoppingcart.html">
+                                        <div class="shopping_icon">
+                                            <!-- 購物車icon -->
+                                            <i class="fa fa-xl fa-cart-shopping"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="memberpage.html" id="d-none3" style="display: none">
+                                        <button class="login_bar">會員頁面</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="/backstage" id="d-none4" style="display: none">
+                                        <button class="login_bar">後台頁面</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="login_bar" id="login_bar01">註冊/登入</button>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="/signOut" id="d-none2"><button class="login_bar d-none1">登出</button></a>
+                                </li>
+                                <!-- <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Header/Navigation -->
+    </header>
